@@ -1,3 +1,5 @@
+(This is a small project repository heavily derivative of the "forum" functionality made on the original Biostar Central codebase, hence, the original readme is preserved here.)
+
 ## Biostar Central
 
 ### Software for better science.
