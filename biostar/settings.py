@@ -13,7 +13,7 @@ def join(*args):
 
 
 # Set the home page to the engine or forum
-INTERNAL_IPS = ['127.0.0.1']
+INTERNAL_IPS = ['198.199.84.12']
 
 # Admin users will be created automatically with DEFAULT_ADMIN_PASSWORD.
 ADMINS = [
@@ -72,7 +72,7 @@ MIDDLEWARE = [
 
 # Site specific information
 SITE_ID = 1
-SITE_DOMAIN = "localhost"
+SITE_DOMAIN = "198.199.84.12"
 SITE_NAME = "Biostar Engine"
 
 # Deployment specific parameters.
@@ -140,7 +140,7 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ['www.lvh.me', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['198.199.84.12','www.lvh.me', 'localhost', '127.0.0.1']
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
