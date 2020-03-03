@@ -6,7 +6,7 @@ from biostar.planet.settings import *
 # Django debug flag.
 DEBUG = True
 
-SITE_NAME = 'Biostar Forum'
+SITE_NAME = 'Homework Helper | For all your homework help needs'
 
 # Site settings.
 POSTS_PER_PAGE = 40

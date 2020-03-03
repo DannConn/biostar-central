@@ -91,7 +91,8 @@ def ajax_vote(request):
         return ajax_error(msg="Too many votes from same IP address. Temporary ban.")
 
     user = request.user
-    type_map = dict(upvote=Vote.UP, bookmark=Vote.BOOKMARK, accept=Vote.ACCEPT)
+    #type_map = dict(upvote=Vote.UP, bookmark=Vote.BOOKMARK, accept=Vote.ACCEPT)
+    type_map = dict(upvote=Vote.UP, downvote=Vote.DOWN, bookmark=Vote.BOOKMARK, accept=Vote.ACCEPT)
 
     vote_type = request.POST.get('vote_type')
     vote_type = type_map.get(vote_type)
@@ -101,8 +102,11 @@ def ajax_vote(request):
     post = Post.objects.filter(uid=post_uid).first()
 
     if post.author == user and vote_type == Vote.UP:
-        return ajax_error("You can not upvote your own post.")
+        return ajax_error("You cannot upvote your own post.")
 
+    if post.author == user and vote_type == Vote.DOWN:
+        return ajax_error("You cannot downvote your own post.")
+	
     if post.author == user and vote_type == Vote.ACCEPT:
         return ajax_error("You can not accept your own post.")
 
