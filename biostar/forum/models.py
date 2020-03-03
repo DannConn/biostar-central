@@ -109,6 +109,9 @@ class Post(models.Model):
 
     # How many people follow that thread.
     subs_count = models.IntegerField(default=0)
+	
+	# number of times a post was flagged for being inappropriate
+    times_flagged = models.IntegerField(default=0)
 
     # Post creation date.
     creation_date = models.DateTimeField(db_index=True)

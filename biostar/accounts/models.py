@@ -91,6 +91,9 @@ class Profile(models.Model):
 
     # User reputation score.
     score = models.IntegerField(default=0, db_index=True)
+    
+    # Strikes against a user.
+    strikes = models.IntegerField(default=0, db_index=True)
 
     # Twitter ID
     twitter = models.CharField(default="", max_length=255, blank=True)
@@ -212,7 +215,7 @@ class Logger(models.Model):
 
     MODERATING, CREATION, EDIT, LOGIN, LOGOUT, BROWSING = range(6)
 
-    ACTIONS_CHOICES = [(MODERATING, "Preformed a moderation action."),
+    ACTIONS_CHOICES = [(MODERATING, "Performed a moderation action."),
                        (CREATION, "Created an object."),
                        (EDIT, "Edited an object."),
                        (LOGIN, "Logged in to the site."),

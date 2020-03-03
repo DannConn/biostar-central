@@ -20,6 +20,41 @@ MAX_CONTENT = 15000
 MIN_CONTENT = 5
 MAX_TITLE = 400
 MAX_TAGS = 5
+VALID_TAGS = ['grade k', 
+			  'grade 1', 
+			  'grade 2', 
+			  'grade 3', 
+			  'grade 4', 
+			  'grade 5', 
+			  'grade 6', 
+			  'grade 7',
+			  'grade 8',
+			  'grade 9',
+			  'grade 10',
+			  'grade 11',
+			  'grade 12',
+			  'post-secondary',
+			  'english',
+			  'math',
+			  'social studies',
+			  'history',
+			  'government',
+			  'economics',
+			  'science',
+			  'biology',
+			  'chemistry',
+			  'physics',
+			  'language',
+			  'french',
+			  'german',
+			  'japanese',
+			  'latin',
+			  'mandarin',
+			  'spanish',
+			  'asl',
+			  'arts',
+			  'misc',
+			  'post-secondary']
 
 
 def english_only(text):
@@ -45,7 +80,8 @@ def valid_title(text):
 def valid_tag(text):
     "Validates form input for tags"
 
-    words = text.split(",")
+    #words = text.split(",")
+    words = [x.lower() for x in text.split(",") if x in VALID_TAGS] # match input against a list of valid tags
     if len(words) > MAX_TAGS:
         raise ValidationError('You have too many tags (5 allowed)')
 
