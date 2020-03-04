@@ -144,9 +144,9 @@ AUTH_PASSWORD_VALIDATORS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'homework_db',
-        'USER': 'hw_user',
-        'PASSWORD': 'hw_user',
+        'NAME': 'db',
+        'USER': 'user',
+        'PASSWORD': 'pword',
         'HOST': 'localhost',
         'PORT': '',
     }
