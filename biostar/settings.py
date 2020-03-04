@@ -73,7 +73,7 @@ MIDDLEWARE = [
 # Site specific information
 SITE_ID = 1
 SITE_DOMAIN = "198.199.84.12"
-SITE_NAME = "Biostar Engine"
+SITE_NAME = "Homework Helper"
 
 # Deployment specific parameters.
 PROTOCOL = "http"
@@ -140,7 +140,6 @@ AUTH_PASSWORD_VALIDATORS = [
 #    }
 #}
 
-. . .
 
 DATABASES = {
     'default': {
@@ -152,8 +151,6 @@ DATABASES = {
         'PORT': '',
     }
 }
-
-. . .
 
 ALLOWED_HOSTS = ['198.199.84.12','www.lvh.me', 'localhost', '127.0.0.1']
 
